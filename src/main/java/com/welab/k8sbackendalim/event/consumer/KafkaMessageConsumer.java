@@ -17,7 +17,7 @@ public class KafkaMessageConsumer {
             topics = SiteUserInfoEvent.Topic,
             properties = {
                     JsonDeserializer.VALUE_DEFAULT_TYPE
-                    + "com.welab.k8sbackendalim.event.consumer.message.user.SiteUserInfoEvent"
+                    + ":com.welab.k8sbackendalim.event.consumer.message.user.SiteUserInfoEvent"
             }
     )
     void handleSiteUserInfoEvent(SiteUserInfoEvent event, Acknowledgment ack) {
